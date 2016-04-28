@@ -1,3 +1,5 @@
+require 'telegram_bot_rails/base_responder'
+
 module TelegramBotRails
   class Engine < ::Rails::Engine
     isolate_namespace TelegramBotRails

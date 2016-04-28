@@ -8,7 +8,7 @@ module TelegramBotRails
       bot_token = params[:token]
       bot = Bot.find_by(token: bot_token)
       if bot.present?
-        "#{bot.responder_name}".classify.constantize.respond(request) #what if it doesn't exist?
+        "#{bot.responder_name}".classify.constantize.new(bot, request).respond
         head :ok, content_type: 'application/json'
       else
         head :bad_request, content_type: 'application/json'
