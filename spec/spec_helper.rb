@@ -1,3 +1,7 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+#set the CODECLIMATE_REPO_TOKEN environment variable when you run your build on your CI server
+
 ENV['RAILS_ENV'] ||= 'test'
 
 require File.expand_path("../dummy/config/environment.rb", __FILE__)

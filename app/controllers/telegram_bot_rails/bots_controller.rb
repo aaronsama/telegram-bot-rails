@@ -2,12 +2,13 @@ require_dependency "telegram_bot_rails/application_controller"
 
 module TelegramBotRails
   class BotsController < ApplicationController
-    skip_before_action :verify_authenticity_token
+    skip_before_action :verify_authenticity_token, only: [:webhook]
 
     def webhook
       bot_token = params[:token]
-      bot = find_bot
+      bot = Bot.find_by(token: bot_token)
       if bot.present?
+        "#{bot.responder_name}".classify.constantize.respond(request) #what if it doesn't exist?
         head :ok, content_type: 'application/json'
       else
         head :bad_request, content_type: 'application/json'
@@ -15,10 +16,5 @@ module TelegramBotRails
       end
     end
 
-    private
-
-    def find_bot
-      nil
-    end
   end
 end

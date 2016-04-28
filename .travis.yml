@@ -1,0 +1,4 @@
+language: ruby
+rvm:
+  - 2.3.0
+#env to add token to code climate
