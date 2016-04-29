@@ -3,3 +3,603 @@
   [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
   [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:35:04.306112"], ["updated_at", "2016-04-29 11:35:04.306112"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:35:04.314056"], ["updated_at", "2016-04-29 11:35:04.314056"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:35:23.424698"], ["updated_at", "2016-04-29 11:35:23.424698"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:35:23.431548"], ["updated_at", "2016-04-29 11:35:23.431548"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:35:48.991365"], ["updated_at", "2016-04-29 11:35:48.991365"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:35:49.000127"], ["updated_at", "2016-04-29 11:35:49.000127"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:36:51.042777"], ["updated_at", "2016-04-29 11:36:51.042777"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:36:51.050275"], ["updated_at", "2016-04-29 11:36:51.050275"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:38:07.002661"], ["updated_at", "2016-04-29 11:38:07.002661"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:38:07.011112"], ["updated_at", "2016-04-29 11:38:07.011112"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:38:52.218508"], ["updated_at", "2016-04-29 11:38:52.218508"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:38:52.225232"], ["updated_at", "2016-04-29 11:38:52.225232"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:39:17.966993"], ["updated_at", "2016-04-29 11:39:17.966993"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:39:17.973323"], ["updated_at", "2016-04-29 11:39:17.973323"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:39:58.741264"], ["updated_at", "2016-04-29 11:39:58.741264"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:39:58.750413"], ["updated_at", "2016-04-29 11:39:58.750413"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:47:53.193013"], ["updated_at", "2016-04-29 11:47:53.193013"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:47:53.202656"], ["updated_at", "2016-04-29 11:47:53.202656"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:49:15.811599"], ["updated_at", "2016-04-29 11:49:15.811599"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:49:15.819967"], ["updated_at", "2016-04-29 11:49:15.819967"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:52:37.056451"], ["updated_at", "2016-04-29 11:52:37.056451"]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:52:37.066150"], ["updated_at", "2016-04-29 11:52:37.066150"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "telegram_bot_rails_bots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "token" varchar NOT NULL, "responder_name" varchar DEFAULT 'application_responder' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_bots_on_token" ON "telegram_bot_rails_bots" ("token")[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "telegram_bot_rails_conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "chat_id" integer, "bot_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_telegram_bot_rails_conversations_on_bot_id" ON "telegram_bot_rails_conversations" ("bot_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160428101452')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428101451')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160427164627')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160428091347')
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:53:35.445070"], ["updated_at", "2016-04-29 11:53:35.445070"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "telegram_bot_rails_bots" ("name", "token", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test_bot"], ["token", "ABCDEFG"], ["created_at", "2016-04-29 11:53:35.453161"], ["updated_at", "2016-04-29 11:53:35.453161"]]
+  [1m[35m (1.0ms)[0m  commit transaction

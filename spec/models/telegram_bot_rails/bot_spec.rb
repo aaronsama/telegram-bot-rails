@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'spec_helper'
 
 module TelegramBotRails
   RSpec.describe Bot, type: :model do

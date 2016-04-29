@@ -11,7 +11,7 @@ module TelegramBotRails
       elsif action
         matchings[regex] = action.to_proc
       else
-        #TODO raise exception
+        raise Exception.new("No block provided for #{regex.inspect}")
       end
     end
 

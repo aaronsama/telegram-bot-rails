@@ -8,7 +8,7 @@ module TelegramBotRails
       protected
 
       def states
-        @states ||= {"start" => {}}
+        @states ||= {start: {}}
       end
 
       def in_state state_name
@@ -23,25 +23,30 @@ module TelegramBotRails
     def initialize bot, request
       @bot = bot
       @request = request
+      @message = request #TODO: change
       # extract message etc
       # @bot = Bot.find_by token: request.token???
       # @conversation = Conversation.find_or_create_by ...
     end
 
     def respond
-      states = self.class.class_eval { states }
+      states = self.class.class_eval { self.states }
       states[current_state].each do |regex, action| #stop on the first?
-        regex =~ @message.text #or whatever
+        regex =~ @message #or whatever
+
         if $~
-          case action.arity
-          when 0
-            action
-          when 1
-            action $1
-          when 2
-            action $1, $2
-          # and so on
-          end
+          action.call(self, *$~.to_a[1..-1])
+          # case action.arity #TODO: CAPIRE come fare a chiamare le Proc (e passare i parametri)
+          # when -1
+          #   # when passing symbols instead of proc
+          # when 0
+          #   action
+          # when 1
+          #   action $1
+          # when 2
+          #   action $1, $2
+          # # and so on
+          # end
         end
       end
       # check conversation state
@@ -54,7 +59,7 @@ module TelegramBotRails
     protected
 
     def current_state
-      "start" # return the current conversation state
+      :start # return the current conversation state
     end
 
   end
