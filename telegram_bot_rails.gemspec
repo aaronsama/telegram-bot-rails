@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = TelegramBotRails::VERSION
   s.authors     = ["Aaron Ciaghi"]
   s.email       = ["aaron.ciaghi@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of TelegramBotRails."
-  s.description = "TODO: Description of TelegramBotRails."
+  s.homepage    = "http://www.example.com"
+  s.summary     = "Summary of TelegramBotRails."
+  s.description = "Description of TelegramBotRails."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

@@ -29,7 +29,30 @@ This will add two tables to your application: `telegram_bot_rails_bots` and `tel
 
 ## Adding Bots to your application
 
-This gem supports multiple bots, storing their credentials in the `telegram_bot_rails_bots` table. You can define `Responders` to respond to requests coming from Telegram bots in `app/responders`. Each bot must have a responder (you can use the same for multiple bots) and, by default, will use `ApplicationResponder` (`app/responders/application_responder.rb`).
+This gem supports multiple bots, storing their credentials in the `telegram_bot_rails_bots` table. You can define `Responders` to respond to requests coming from Telegram bots in `app/responders`. Each bot must have a responder (you can use the same for multiple bots) and, by default, will use `ApplicationResponder` (`app/responders/application_responder.rb`). You need to create your first responder following this template.
+
+```ruby
+class ApplicationResponder < TelegramBotRails::BaseResponder
+
+  in_state :start do |s|
+    s.on /regex1/, :call_some_method
+    s.on /regex2/ do
+      # execute some block
+    end
+  end
+
+  # in_state :some_state do ...
+
+end
+```
+
+You can also use a generator
+
+```
+$ rails g bot NAME TOKEN
+```
+
+This will create a migration to add the new bot to the DB and will create a new responder. You can also add your bot manually (or programmatically) with `Bot.create(name: "name", token: "TOKEN", responder_name: "RESPONDER CLASS")`.
 
 ## Credits
 

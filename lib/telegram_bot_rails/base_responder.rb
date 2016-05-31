@@ -1,4 +1,5 @@
 require 'telegram_bot_rails/state_builder'
+require 'telegram_bot_rails/message_sender'
 
 module TelegramBotRails
   class BaseResponder
@@ -21,9 +22,17 @@ module TelegramBotRails
     end
 
     def initialize bot, request
-      @bot = bot
-      @request = request
-      @message = request #TODO: change
+      @bot = Bot.find_by token: bot.token
+      @client = @bot.client
+      @update = Telegram::Bot::Types::Update.new(request)
+      @message = @update.message
+      @conversation = Conversation.find_or_create_by chat_id: @message.chat.id, bot_id: @bot.id
+
+      # @user = User.find_or_create_by(uid: message.from.id)
+      # if message.chat.id != @user.chat_id
+      #   @user.update_attributes chat_id: message.chat.id
+      # end
+
       # extract message etc
       # @bot = Bot.find_by token: request.token???
       # @conversation = Conversation.find_or_create_by ...
@@ -59,7 +68,22 @@ module TelegramBotRails
     protected
 
     def current_state
-      :start # return the current conversation state
+      @conversation.state || :start
+    end
+
+    def go_to_state state
+      @conversation.update_attribute :state, state
+    end
+
+    def send_answer
+      MessageSender.new(bot: @client,
+                        chat: @conversation.id,
+                        text: "Pizza, insalata o qualcosa dalla cucina?",
+                        answers: [
+                          "#{MenuBuilder.emoji_for(:pizze)} Pizze",
+                          "#{MenuBuilder.emoji_for(:insalate)} Insalate",
+                          "#{MenuBuilder.emoji_for(:cucina)} Cucina"
+                        ]).send
     end
 
   end

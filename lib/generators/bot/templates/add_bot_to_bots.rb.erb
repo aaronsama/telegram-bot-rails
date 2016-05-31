@@ -1,0 +1,11 @@
+class Add<%= @name.classify %>ToBots < ActiveRecord::Migration
+
+  def up
+    TelegramBotRails::Bot.create(name: "<%= @name %>", token: "<%= @token %>", responder_name: "<%= @name.underscore %>_responder")
+  end
+
+  def down
+    TelegramBotRails::Bot.find_by(token: "<%= @token %>").destroy
+  end
+
+end

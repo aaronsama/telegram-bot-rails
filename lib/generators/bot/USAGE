@@ -1,0 +1,9 @@
+Description:
+    Creates a new bot and adds it to the telegram_bot_rails_bots table. It also creates the template for the responder
+
+Example:
+    rails generate bot Thing ABCDEF1234
+
+    This will create:
+        - an entry in the 'telegram_bot_rails_bots' table that will be used for bot lookup
+        - a responder called 'things_responder.rb' located in 'app/responders'
