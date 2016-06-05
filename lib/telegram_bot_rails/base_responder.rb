@@ -27,42 +27,16 @@ module TelegramBotRails
       @update = Telegram::Bot::Types::Update.new(request)
       @message = @update.message
       @conversation = Conversation.find_or_create_by chat_id: @message.chat.id, bot_id: @bot.id
-
-      # @user = User.find_or_create_by(uid: message.from.id)
-      # if message.chat.id != @user.chat_id
-      #   @user.update_attributes chat_id: message.chat.id
-      # end
-
-      # extract message etc
-      # @bot = Bot.find_by token: request.token???
-      # @conversation = Conversation.find_or_create_by ...
     end
 
     def respond
       states = self.class.class_eval { self.states }
       states[current_state].each do |regex, action| #stop on the first?
         regex =~ @message #or whatever
-
         if $~
           action.call(self, *$~.to_a[1..-1])
-          # case action.arity #TODO: CAPIRE come fare a chiamare le Proc (e passare i parametri)
-          # when -1
-          #   # when passing symbols instead of proc
-          # when 0
-          #   action
-          # when 1
-          #   action $1
-          # when 2
-          #   action $1, $2
-          # # and so on
-          # end
         end
       end
-      # check conversation state
-      # look at all the matchings and do your magic
-
-      # necessary to make states available to subclasses
-
     end
 
     protected
@@ -75,15 +49,11 @@ module TelegramBotRails
       @conversation.update_attribute :state, state
     end
 
-    def send_answer
+    def send_answer text, answers=nil
       MessageSender.new(bot: @client,
                         chat: @conversation.id,
-                        text: "Pizza, insalata o qualcosa dalla cucina?",
-                        answers: [
-                          "#{MenuBuilder.emoji_for(:pizze)} Pizze",
-                          "#{MenuBuilder.emoji_for(:insalate)} Insalate",
-                          "#{MenuBuilder.emoji_for(:cucina)} Cucina"
-                        ]).send
+                        text: text,
+                        answers: answers).send
     end
 
   end
